@@ -1,0 +1,512 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* Header y navegación */
+header {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+    width: 100%;
+}
+
+.logo h1 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #333;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+nav ul li a.active {
+    color: #3498db;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Hero section */
+.hero {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #3498db;
+    padding: 0.7rem 1.5rem;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f4f4f4;
+    transform: translateY(-3px);
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #2980b9;
+}
+
+/* Services section */
+.destacados {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.destacados h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.servicios-container, #servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+#servicios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicio-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: calc(25% - 1.5rem);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.servicio-card h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.servicio-card p {
+    margin-bottom: 1.5rem;
+}
+
+/* Page headers */
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.page-header h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact page */
+.contacto-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+
+.contacto-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-formulario {
+    flex: 2;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+    margin-bottom: 1.5rem;
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #3498db;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Nosotros page */
+.nosotros-contenido {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.nosotros-item {
+    margin-bottom: 1.5rem;
+}
+
+.nosotros-item h3 {
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.valores-lista {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}
+
+.servicios-lista {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive design */
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1200px) {
+    .servicio-card {
+        width: calc(33.333% - 1.5rem);
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+    .servicio-card {
+        width: calc(50% - 1.5rem);
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0.5rem;
+        position: relative;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+        margin-top: 0.3rem;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    nav {
+        margin-top: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background-color: white;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        padding-top: 4rem;
+        transition: right 0.3s ease;
+        z-index: 100;
+    }
+    
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    nav ul li a {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .servicio-card {
+        width: 100%;
+    }
+    
+    .contacto-contenido {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contacto-info, 
+    .contacto-formulario {
+        width: 100%;
+    }
+    
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    header {
+        padding: 0.8rem 0.3rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    main {
+        padding: 0.8rem;
+    }
+    
+    .hero {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-small {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .destacados h2,
+    .page-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .servicio-card {
+        padding: 1rem;
+    }
+    
+    .servicio-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+    }
+    
+    .contact-info {
+        font-size: 0.8rem;
+    }
+} 

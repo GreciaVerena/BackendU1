@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos - ConIngenio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ConIngenio</h1>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicios.html">Nuestros Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Contáctenos</h2>
+            <p>Estamos para ayudarle, no dude en contactarnos</p>
+        </section>
+
+        <section class="contacto-contenido">
+            <div class="contacto-info">
+                <h3>Información de Contacto</h3>
+                <div class="info-item">
+                    <strong>Dirección:</strong>
+                    <p>Av. Providencia 1234, Oficina 601</p>
+                    <p>Providencia, Santiago</p>
+                    <p>Chile</p>
+                </div>
+                <div class="info-item">
+                    <strong>Teléfono:</strong>
+                    <p>+56 2 1234 5678</p>
+                </div>
+                <div class="info-item">
+                    <strong>Email:</strong>
+                    <p>info@coningenio.cl</p>
+                </div>
+                <div class="info-item">
+                    <strong>Sitio Web:</strong>
+                    <p>www.coningenio.cl</p>
+                </div>
+            </div>
+
+            <div class="contacto-formulario">
+                <h3>Formulario de Contacto</h3>
+                <form id="form-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 ConIngenio. Todos los derechos reservados.</p>
+            <div class="contact-info">
+                <p>Av. Providencia 1234, Oficina 601, Providencia, Santiago, Chile</p>
+                <p>Teléfono: +56 2 1234 5678 | Email: info@coningenio.cl</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
